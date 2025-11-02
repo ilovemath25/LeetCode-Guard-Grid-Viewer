@@ -1,0 +1,62 @@
+.inputs {
+    display: grid;
+    gap: 6px 12px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.inputs label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.inputs input {
+    width: 160px;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+}
+
+
+#runBtn {
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+#grid {
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.zero {
+    background-color: #4aff4a;
+}
+.one {
+    background-color: #ff4444;
+}
+.g {
+    background-color: #ffffff;
+}
+.w {
+    background-color: #ffffff;
+}
