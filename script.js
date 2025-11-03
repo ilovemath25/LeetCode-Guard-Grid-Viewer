@@ -47,24 +47,31 @@ function showGrid(grid) {
     const root = document.getElementById("grid");
     root.innerHTML = "";
 
-    grid.forEach(row => {
+    grid.forEach((row, i) => {
         const r = document.createElement("div");
         r.className = "row";
 
-        row.forEach(cell => {
+        row.forEach((cell, j) => {
             const c = document.createElement("div");
             c.className = "cell " +
                 (cell === "g" ? "g" :
                  cell === "w" ? "w" :
                  cell === "1" ? "one" : "zero");
+            if (cell === "g" || cell === "w") {
+                c.textContent = cell.toUpperCase();
+            }
+            const coord = document.createElement("div");
+            coord.className = "coord";
+            coord.textContent = `(${i},${j})`;
 
-            if (cell === "g" || cell === "w") c.textContent = cell;
+            c.appendChild(coord);
             r.appendChild(c);
         });
 
         root.appendChild(r);
     });
 }
+
 
 document.getElementById("runBtn").onclick = () => {
     const m = +document.getElementById("rows").value;
